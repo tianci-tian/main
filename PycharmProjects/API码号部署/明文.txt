@@ -1,0 +1,13 @@
+*HEADER DESCRIPTION
+******************************************
+Mno             : apiTest
+ProfileType     : profile_apiTest_45407_002
+Expired Date    : 360
+Maximum Number  : 100
+******************************************
+*INPUT VARIABLES DESCRIPTION (Space separated) (Ki and OPc in clear text)
+******************************************
+var_In: ICCID/IMSI/KI/OPC
+****************start data****************
+89820220926999200150 2445033311000001 EBC17635A78CB261A8FD7BE4807BF509 1AF43C9080F985807C0FCF9447B15286
+****************end data****************
