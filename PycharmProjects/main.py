@@ -1,0 +1,10 @@
+data = '''-----BEGIN PGP MESSAGE-----
+Version: BCPG v1.62
+
+hIwDPYe2aQXQyfABBACVIftLy8cAes0edn/3/mjobH3m2pAm7WXTdXQ6iLbJW3mx
+Sj7qI2r0t0LRAw/UoSdtLoMuJuEoZt88syr4Xsnn7qni8/lCfnZZWbjV5bQx8MyR
+ib2Tx8cd7vlM9y08P9e2LR/XdOF2AMTw1oneJyOxf40pVp7sPhOlc9cYUQsBOtJK
+AY7BuNNkfsYQ/dcV/7xbWSbJpX3OwGcylQ/KwMHhFLVMOE5GXQeRPI7REKHr+j1T
+jwbnCTYjyrH7CwsX3zgPs84yjHypBrQkCm0=
+=mu7f1111
+-----END PGP MESSAGE-----'''

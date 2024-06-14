@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../DrissionPage/.idea/DrissionPage.iml" filepath="$PROJECT_DIR$/../DrissionPage/.idea/DrissionPage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MP_API2-0/.idea/MP_API2-0.iml" filepath="$PROJECT_DIR$/../MP_API2-0/.idea/MP_API2-0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MySQL_practice/.idea/MySQL_practice.iml" filepath="$PROJECT_DIR$/../MySQL_practice/.idea/MySQL_practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PycharmProjects.iml" filepath="$PROJECT_DIR$/.idea/PycharmProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bysms/.idea/bysms.iml" filepath="$PROJECT_DIR$/../bysms/.idea/bysms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../项目/DP+/py_test/interface-auto-test-model-master/.idea/interface-auto-test-model-master.iml" filepath="$PROJECT_DIR$/../../项目/DP+/py_test/interface-auto-test-model-master/.idea/interface-auto-test-model-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../learn_flask/.idea/learn_flask.iml" filepath="$PROJECT_DIR$/../learn_flask/.idea/learn_flask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../practice/.idea/practice.iml" filepath="$PROJECT_DIR$/../practice/.idea/practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../项目/Marketplace/MP_2.0/src/.idea/src.iml" filepath="$PROJECT_DIR$/../../项目/Marketplace/MP_2.0/src/.idea/src.iml" />
+    </modules>
+  </component>
+</project>
