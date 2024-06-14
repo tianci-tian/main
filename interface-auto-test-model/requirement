@@ -1,0 +1,20 @@
+# 安装cassandra数据库操作模块
+pip install cassandra-driver
+
+# 安装requests模块，用于调用http接口
+pip install requests
+
+# 安装MySQL数据库操作模块
+pip install PyMySQL
+
+# 安装openpyxl，操作excel表格(.xlsx文件)
+pip install openpyxl
+
+# 安装redis，操作redis数据库模块
+pip install redis
+
+# 安装ddt，用于与unittest结合，实现数据驱动
+pip install ddt
+
+# BeautifulReport报告模板的使用
+# 具体使用方式请看readme中的“使用框架前置条件”
