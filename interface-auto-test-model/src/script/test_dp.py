@@ -14,8 +14,6 @@ sys.path.append(item_path) # 将该项目的根目录（/interface-auto-test-mod
 #file_name='testdata_dp.xlsx'# 测试数据名称，放在testdata文件下。测试数据模板请看“接口数据模板解析”
 file_name = 'testdata_dp.xlsx'
 # current_file_name  为要测试的文件,获取文件名称
-current_file_name = 'test_1'
-testLogger = GetLog.Logger(current_file_name).getlog()# 将测试用例脚本名称加载在日志模块中，打印日志时，会带上。
 
 
 '''
@@ -40,20 +38,25 @@ class UnitTest(unittest.TestCase):
     def testOne(self,**testdata):
         '''
         测试用例Flag：profileQuery；
-        :param data--根据iccid查询；
+        :param data--根据iccid/eid查询；
         '''
         response = requests.request(method=testdata["Method"], url=(testdata["Url"] + testdata["SendData"]['path']), headers=testdata["headers"],
                                     params=testdata["SendData"]['params'])
         # 将响应内容解析为 JSON，并禁用 ASCII 编码
         response_json = response.json()
         response_str = json.dumps(response_json, indent=4, ensure_ascii=False)
+        #断言+log
         try:
             self.assertEquals(response_json['code'], testdata['AssertInfo']['code'])
             msg = True
         except AssertionError:
             msg = False
+        current_file_name = testdata['CaseDescription']
+        testLogger = GetLog.Logger(current_file_name).getlog()  # 将测试用例脚本名称加载在日志模块中，打印日志时，会带上。
+
         testLogger.info('{}.{}已测试；结果为：{}；测试数据为：{}'.format(self.__class__.__name__,sys._getframe().f_code.co_name,msg,response_str))
 
+        return response_str
     def tearDown(self):
         pass
 
