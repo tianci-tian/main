@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2020/11/12 11:42
 # @Author  : 朱宽
-# @File    : test_1.py
+# @File    : api_test_本次不使用.py
 # @Software: Win10、Python3.8.5 and Pycharm
 # '''
 #     命令行执行某python文件时
@@ -53,6 +53,7 @@ class UnitTest(unittest.TestCase):
     @data(*EveryTestCaseFlag(file_name=file_name,TestCaseFlag='delete_wifigroup').get_every_TestCaseFlag())
     def test_1_test2(self,data):
         testLogger.info('{}.{}已测试；结果为：；测试数据为：{}'.format(self.__class__.__name__,sys._getframe().f_code.co_name,data))
+
     # 执行用例
     def test_api_productList(self):
         api_test = APITEST("/mp-api/api/esim/v2/productList", "GET", "SU4JJX5PDN")

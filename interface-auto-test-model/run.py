@@ -20,7 +20,7 @@ from config import globalConfig
 import time
 from src.utils.DingDelivery import PushDataForDingDing
 from config.globalConfig import test_script_path
-
+from src.utils.EmailDelivery import send_email
 
 class RunClass():
     '''
@@ -40,10 +40,12 @@ class RunClass():
         time_now = time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime(time.time()))  # 获取当前时间，用于日志名称命名
         filename = '自动化测试报告-' + time_now
         result.report(filename=filename, description="测试报告", log_path=report_path)
-
-        send_report = PushDataForDingDing()  # 实例化钉钉发送报告类
-        send_report.post_message()  # 调用发送函数
-
+        # 钉钉发送
+        #send_report = PushDataForDingDing()  # 实例化钉钉发送报告类
+        #send_report.post_message()  # 调用发送函数
+        # 邮箱发送
+        html_report_path = f'testreport/{filename}.html'
+        send_email(html_report_path)
 
 if __name__ == "__main__":
     '''
