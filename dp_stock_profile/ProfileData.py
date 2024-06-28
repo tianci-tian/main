@@ -1,3 +1,4 @@
+import openpyxl
 def PlanProfileDpStock(file_path, number):
     with open(file_path, 'r') as file:
         lines = file.readlines()
@@ -12,6 +13,8 @@ def PlanProfileDpStock(file_path, number):
 
     new_lines = [header]
 
+    profile_ids = []
+
     for num in range(1, number + 1):
         profile_id = str(int(profile_id_field) + num).zfill(len(profile_id_field))
         iccid = str(int(iccid_field) + num).zfill(len(iccid_field))
@@ -24,6 +27,19 @@ def PlanProfileDpStock(file_path, number):
 
         new_line = f"{profile_id}:{iccid},{imsi},{ki},{opc},{msisdn},{busi_data},{qrcode}"
         new_lines.append(new_line)
+
+        profile_ids.append(profile_id)
+        # Create a new Excel workbook
+        workbook = openpyxl.Workbook()
+        sheet = workbook.active
+
+        # Write all PROFILEIDs to column A
+        for idx, profile_id in enumerate(profile_ids, start=1):
+            sheet[f'A{idx}'] = profile_id
+
+        # Save the workbook to a file
+        file_name = "D://桌面//QR-ESIMGO入库-20240628-Modified.xlsx"
+        workbook.save(file_name)
 
     with open('D://桌面//QR-ESIMGO入库-20240628-Modified.txt', 'w') as file:
         for line in new_lines:
@@ -50,4 +66,4 @@ def increment_qrcode(qrcode_str, increment):
 
 
 if __name__ == '__main__':
-    PlanProfileDpStock(file_path='D://桌面//QR-ESIMGO入库-20240628.txt', number=3)
+    PlanProfileDpStock(file_path='D://桌面//QR-ESIMGO入库-20240628.txt', number=1000)
