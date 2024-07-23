@@ -1,4 +1,4 @@
-from API码号部署.Pre.encrypt_jar import run_java_jar
+from PycharmProjects.API码号部署.Pre.encrypt_jar import run_java_jar
 from openpyxl import Workbook, load_workbook
 
 '''
@@ -48,7 +48,11 @@ def modify_file_content(file_path, num_iterations):
             file.writelines(lines)
 
 file_path = 'D:\\项目\\DP+\\实施部署API\\Pre环境\\明文.txt'
-num_iterations = 3   #1w组数据
+
+num_iterations = int(input("请输入你需要多少组测试数据："))
+print("你输入的是：", num_iterations)
+input("按任意键继续...")
+
 modify_file_content(file_path, num_iterations)
 
 

@@ -5,7 +5,7 @@ def ModifyFileContent(file_path, num_iterations):
     iccidList = []
     with open(file_path, 'r') as file:
         lines = file.readlines()
-
+    line_12 = lines[12]
     current_index = 0
     while current_index < num_iterations:
         if len(lines) >= 11:
@@ -19,6 +19,12 @@ def ModifyFileContent(file_path, num_iterations):
                 lines[11] =' '.join(elements) + '\n'
                 lines.append(lines[11])  # 将修改后的行添加到末尾
             current_index += 1
+
+    # 修改完后删除第11、12行
+    #最后面插入12行数据
+    del lines[11:13]
+    lines.extend(line_12)
+
     with open(file_path, 'w') as file:
         file.writelines(lines)
     WriteExcel(iccidList)
@@ -36,4 +42,8 @@ def WriteExcel(iccidList):
     # 保存工作簿
     workbook.save('D:\\桌面\\工作表.xlsx')
 
-ModifyFileContent('D:\\桌面\\profile_apiTest_45407_002.txt', 30000)
+if __name__ == "__main__":
+
+    ModifyFileContent('D:\\DPprofile\\input.inp', 20000)
+
+
