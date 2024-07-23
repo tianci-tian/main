@@ -1,5 +1,16 @@
 import openpyxl
 
+#检查文件内容
+def CheckProfileFile(file_path):
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+    line_count = len(lines)
+    if line_count == 13:
+        return
+    elif line_count > 13:
+        with open(file_path, 'w') as file:
+            file.writelines(lines[:11] + lines[-2:])
+
 # 生产 5w 数据,存储 txt
 def ModifyFileContent(file_path, num_iterations):
     iccidList = []
@@ -43,7 +54,7 @@ def WriteExcel(iccidList):
     workbook.save('D:\\桌面\\工作表.xlsx')
 
 if __name__ == "__main__":
-
-    ModifyFileContent('D:\\DPprofile\\input.inp', 20000)
+    CheckProfileFile('D:\\DPprofile\\input.inp')
+    ModifyFileContent('D:\\DPprofile\\input.inp', 10000)
 
 
