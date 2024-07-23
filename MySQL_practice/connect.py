@@ -1,6 +1,6 @@
 import mysql.connector
 
-def execute_sql(sql):
+def execute_sql(sql,host,user,password,database):
     try:
         # 连接数据库
         mydb = mysql.connector.connect(
