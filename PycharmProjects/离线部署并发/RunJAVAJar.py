@@ -9,3 +9,6 @@ def RunJAVAJar(jar_path):
         output, error = process.communicate()
     return output
 
+
+if __name__ == '__main__':
+    RunJAVAJar('D:\\DPprofile\\encrypt-1.0-SNAPSHOT.jar')
