@@ -5,6 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 with (open('./data.txt', 'r', encoding='utf-8') as f):
     lines = f.readlines()
     for line in lines:
+        print(line)
         # 创建 Edge 浏览器驱动实例
         driver = webdriver.Edge()
         driver.maximize_window()
